@@ -5,8 +5,48 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cool guy$/;
-
+      botRegex = /^\/cool guy$/; botRegexRULES = /^\/rules/; botRegexOWNER = /^\/owners/; botRegexNEW = /^\/new/; botRegexBLOCK = /^\/block/; botRegexSELL = /^\/sell/;  botRegexCOMPLETED = /^\/completed/; botRegexTRADE = /^\/trade/; botRegexCOMMAND = /^\/command/; 
+}
+  else if(request.text && botRegexRULES.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://docs.google.com/document/d/1pBCDenl4hQjc5T9ZNX4OYmRhqMhsVLyPzzi-K3gN1Kc/edit?usp=sharing");
+    this.res.end();
+}
+  else if(request.text && botRegexOWNER.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://docs.google.com/spreadsheets/d/1_saEfwCioR93CvRG8-ToDB-WsUyLs3_ehhsGaJpAl24/edit?usp=sharing");
+    this.res.end();
+}
+  else if(request.text && botRegexNEW.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://goo.gl/forms/CCxuCunKOw");
+    this.res.end();
+}
+  else if(request.text && botRegexBLOCK.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://docs.google.com/spreadsheets/d/1nWUXxMOjGZdfz_fEuL-163t1DQfYQngZBwyxICWD4VU/edit?usp=sharing");
+    this.res.end();
+}
+  else if(request.text && botRegexSELL.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://goo.gl/forms/WchWg9BklI");
+    this.res.end();
+}
+  else if(request.text && botRegexCOMPLETED.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://docs.google.com/spreadsheets/d/1_saEfwCioR93CvRG8-ToDB-WsUyLs3_ehhsGaJpAl24/edit?usp=sharing");
+    this.res.end();
+}
+  else if(request.text && botRegexTRADE.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://goo.gl/forms/5Vc4qx41Kx");
+    this.res.end();
+}
+  else if(request.text && botRegexCOMMAND.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://docs.google.com/document/d/16a0fcm_rijQS0X60wBM7bjn_gfEddDXAMmepVYZo7jU/edit?usp=sharing");
+    this.res.end();
+  }
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage();
