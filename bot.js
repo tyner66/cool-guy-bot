@@ -5,14 +5,14 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cool guy$/;  botRegexDL = /^\/dl/; botRegexCOMMAND = /^\/command/; 
+      botRegex = /^\/cool guy$/; botRegexSDL = /^\/sdl/i; botRegexDL = /^\/dl/; botRegexCOMMAND = /^\/command/; 
 }
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage();
     this.res.end();
 }
-else if(request.text && botRegexDL.test(request.text)) {
+else if(request.text && botRegexSDL.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://daddyleagues.com/sebl/team/"+request.text.substring(5,8)+"/schedule");
     this.res.end();
