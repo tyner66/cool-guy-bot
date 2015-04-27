@@ -53,7 +53,7 @@ function respond() {
   }
   else if(request.text && botRegexARCHER.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://docs.google.com/document/d/1rArdgW-u3jx2ZPR_a69HZ_qwjP0-6GDpE8emx6ds-NQ/edit?usp=sharing");
+    postMessage("https://docs.google.com/document/d/16a0fcm_rijQS0X60wBM7bjn_gfEddDXAMmepVYZo7jU/edit?usp=sharing");
     this.res.end();
   }
   else if(request.text && botRegexPLAYER.test(request.text)) {
