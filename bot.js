@@ -113,7 +113,7 @@ function respond() {
   } 
   else if(request.text && botRegexDL.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/sebl/team/"+request.text.substring(5,8)+"/roster");
+    postMessage("http://daddyleagues.com/sebl/team/"+request.text.substring(1,8)+"/roster");
     this.res.end();
   } 
   else if(request.text && botRegexSalt.test(request.text)) {
